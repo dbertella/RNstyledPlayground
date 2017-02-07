@@ -3,6 +3,7 @@ Example app to debug a weird bug of a styled.View inside a ListView
 
 I have a `ListView` that renders lines with different components.
 The styled.View got cut in render.
+This Repo is created in order to have a use case for this [issue](https://github.com/styled-components/styled-components/issues/465) on the `styled-component` library
 
 ## Here a quick preview of the bug:
 ### iOS    
