@@ -11,13 +11,8 @@ import {
   ListView,
   View
 } from 'react-native';
-import styled from 'styled-components/native';
 
-const Row = styled.View`
-    flex: 1;
-    flex-direction: row;
-    justify-content: space-between;
-`;
+import { Row } from './Row';
 
 const data = [{
     name: 'Test 1',
@@ -52,7 +47,6 @@ const Line = (rowData) => (
       <Text>{rowData.name}</Text>
       <Text>{rowData.date}</Text>
     </Row>
-    <Text>{rowData.body}</Text>
   </View>
 )
 

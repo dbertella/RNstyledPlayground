@@ -13,11 +13,7 @@ import {
 } from 'react-native';
 import styled from 'styled-components/native';
 
-const Row = styled.View`
-    flex: 1;
-    flex-direction: row;
-    justify-content: space-between;
-`;
+import { Row } from './Row';
 
 const data = [{
     name: 'Test 1',
@@ -44,6 +40,7 @@ const data = [{
 
 const Line = (rowData) => (
   <View style={{ borderBottomWidth: 1 }}>
+
     <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'space-between' }}>
       <Text>{rowData.name}</Text>
       <Text>{rowData.date}</Text>
@@ -52,6 +49,11 @@ const Line = (rowData) => (
       <Text>{rowData.name}</Text>
       <Text>{rowData.date}</Text>
     </Row>
+    <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'space-between' }}>
+      <Text>{rowData.name}</Text>
+      <Text>{rowData.date}</Text>
+    </View>
+    
     <Text>{rowData.body}</Text>
   </View>
 )
