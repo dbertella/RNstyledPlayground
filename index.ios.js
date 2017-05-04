@@ -12,8 +12,8 @@ import {
   View
 } from 'react-native';
 import styled from 'styled-components/native';
-
 import { Row } from './Row';
+import Container from './Container';
 
 const data = [{
     name: 'Test 1',
@@ -37,6 +37,9 @@ const data = [{
     body: 'Test Test Test Test Test'
   },
 ]
+const ContainerWithBorder = styled(Container)`
+  borderBottomWidth: 1
+`;
 
 const Line = (rowData) => (
   <View style={{ borderBottomWidth: 1 }}>
@@ -67,12 +70,19 @@ export default class RNstyledComponent extends Component {
     };
   }
 
-  render() {
+  /*render() {
     return (
       <ListView
         dataSource={this.state.dataSource}
         renderRow={Line}
       />
+    );
+  }*/
+  render() {
+    return (
+      <ContainerWithBorder>
+        <Text>This is my container</Text>
+      </ContainerWithBorder>
     );
   }
 }
